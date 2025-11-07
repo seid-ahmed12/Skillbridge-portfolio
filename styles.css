@@ -46,6 +46,8 @@ body {
   color: chocolate;
   font-size: 40px;
   font-weight: bold;
+  justify-content: center;
+  text-align: center;
 }
 span {
   color: aqua;
@@ -57,13 +59,15 @@ span {
   font-size: 30px;
   font-weight: bold;
   margin: 5px;
+  text-align: center;
 }
 
 .home p {
-  color: brown;
+  color: rgb(24, 4, 4);
   font-size: 20px;
-  font-weight: bold;
   margin: 5px;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .about {
@@ -103,24 +107,23 @@ span {
 .project-wrapper {
   display: grid;
   grid-template-columns: 250px 250px 250px;
-  grid-template-rows: 220px 220px ;
+  grid-template-rows: 220px 220px;
   gap: 30px;
+  justify-content: center;
 }
 
-.project-wrapper div{
-text-align: center;
-justify-content: center;
+.project-wrapper div {
+  text-align: center;
 }
- .project-wrapper div p{
+.project-wrapper div p {
   margin-top: 15px;
   color: gray;
- }
-  .project-wrapper div a{
+}
+.project-wrapper div a {
   margin-top: 15px;
-  /* color: #fff; */
   text-decoration: none;
-  }
-.project-wrapper div a:hover{
+}
+.project-wrapper div a:hover {
   color: aqua;
   text-decoration: underline;
 }
@@ -146,6 +149,73 @@ span {
   font-weight: 600;
 }
 
-form{
-    align-items: center;
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+.btn {
+  background-color: brown;
+  color: #fff;
+  padding: 7px 15px;
+  border-radius: 20px;
+  border: none;
+}
+.btn:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+  color: black;
+}
+footer {
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Media Query */
+
+/* Mobile device */
+
+@media (max-width: 480px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .header h3 {
+    color: black;
+  }
+  .navbar a {
+    color: #fff;
+    gap: 10px;
+  }
+  .home h1 {
+    font-size: 25px;
+  }
+  .home h4 {
+    font-size: 20px;
+  }
+
+  .about h2 {
+    font-size: 30px;
+  }
+
+  .project-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* for Tablet device */
+
+@media (max-width: 760px) {
+  .project-wrapper {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 200px 200px;
+    gap: 30px;
+    justify-content: center;
+  }
+  .project-wrapper div {
+  text-align: center;
+}
 }
